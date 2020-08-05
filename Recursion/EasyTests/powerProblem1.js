@@ -9,5 +9,5 @@
 
 function power (base, exponent) {
 	if (exponent === 0) return 1;
-	return base * exponent * power(base, exponent - 1);
+	return base * power(base, exponent - 1);
 }
