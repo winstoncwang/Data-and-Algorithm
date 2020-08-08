@@ -6,12 +6,20 @@
 // reverse('awesome') // 'emosewa'
 // reverse('rithmschool') // 'loohcsmhtir'
 
+//string split method
 function reverse (str) {
 	if (str.length === 1) return str;
 	let reverseStr = [];
 	let arrStr = str.split('');
 	reverseStr.push(arrStr.pop());
-	return reverseStr.concat(reverse(arrStr.join('')));
+	return reverseStr.concat(reverse(arrStr.join(''))).join('');
 }
 
-reverse('rithmschool')
+//string.prototype.slice method
+
+function reverse (str) {
+	if (str.length === 0) return '';
+	return str[str.length - 1].concat(reverse(str.slice(0, -1)));
+}
+
+reverse('rithmschool');
