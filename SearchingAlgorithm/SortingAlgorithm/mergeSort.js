@@ -2,6 +2,18 @@
 
 //MERGE ARRAY function is implemented before the whole sort is completed
 
+//Merge Sort Time Complexity:
+//						O(n log n) (BEST)
+//						O(n log n) (AVERAGE)
+//						O(n log n) (WORST)
+
+//O(log n) is the splitting of the array until length===1
+//O(n) is the comparison when merging
+//Total is O(n log n)
+
+//Merge Sort Space Complexity:
+//						O(n)
+
 function mergeArray (arr1, arr2) {
 	let newArr = [];
 	//pointer
