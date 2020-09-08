@@ -5,6 +5,8 @@
 //bubble sort by adding a flag which skips the comparison/swap if already
 //in order
 
+//Space complexity : O(1) constant space
+
 function bubbleSort (arr) {
 	//outer loop loops backwards
 	for (let i = arr.length - 1; i >= 0; i--) {
