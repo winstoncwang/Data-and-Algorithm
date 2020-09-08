@@ -29,4 +29,19 @@ function mergeArray (arr1, arr2) {
 	return newArr;
 }
 
-mergeArray([ 1, 10, 40 ], [ 2, 14, 99, 100 ]);
+//mergeArray([ 1, 10, 40 ], [ 2, 14, 99, 100 ]);
+
+function mergeSort (arr) {
+	if (arr.length <= 1) return arr;
+
+	let mid = Math.floor(arr.length / 2);
+
+	//recursion on first/second half until arr passed on is less or equal to 1 using mergeSort
+	let firstHalf = mergeSort(arr.slice(0, mid));
+	let secondHalf = mergeSort(arr.slice(mid));
+
+	//merge the array using first/second half
+	return mergeArray(firstHalf, secondHalf);
+}
+
+mergeSort([ 1, 10, 40, 2, 14, 99, 100 ]);
